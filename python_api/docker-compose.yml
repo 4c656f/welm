@@ -1,0 +1,17 @@
+version: '3.1'
+
+services:
+  get:
+    container_name: get_api
+    restart: always
+    build: ./get
+    ports:
+      - 80:80
+
+
+  search:
+    container_name: search_api
+    restart: always
+    build: ./search
+    ports:
+      - 8000:8000

@@ -1,0 +1,172 @@
+@font-face {
+    font-family: 'my_Sans';
+    src: url('neuemetananext-semibold.woff2') format('woff2'),
+    url('neuemetananext-semibold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.search_items_wrap_wrap{
+    z-index: 2;
+}
+
+.search_items_conteiner{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 20px;
+    background-color: black;
+    border-radius: 10px;
+    border: white solid 1px;
+    padding: 20px;
+    position: absolute;
+    transform: translate(-50%, 0);
+    left: 50%;
+    top: calc(0% + 80px);
+
+
+    overflow: hidden;
+    overflow-y: auto;
+    z-index: 5;
+    max-height: 40vh;
+}
+.card_api{
+    background-color: red;
+}
+.search_items_conteiner::-webkit-scrollbar{
+    width: 30px;
+
+}
+
+.search_items_conteiner::-webkit-scrollbar-track{
+    background: black;
+    border-radius: 20px;
+}
+.search_items_conteiner::-webkit-scrollbar-thumb{
+    width: 10px;
+    background: white;
+    border: 12px solid black;
+    border-radius: 20px;
+}
+.search_card{
+    flex-shrink: 0;
+    color: white;
+    display: flex;
+    height: 70px;
+    width: 300px;
+    background-color: black;
+    border-radius: 10px;
+    border: white solid 1px;
+    transition: 0.2s;
+}
+.search_card:hover{
+    background-color: #c1ff57;
+    color: black;
+}
+.search_card:hover>.right_container>.search_text_name{
+
+    color: black;
+}
+
+.right_container{
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    justify-content: space-between;
+}
+.left_container{
+    height: 100%;
+    display: flex;
+
+    align-content: center;
+    align-items: center;
+
+}
+.search_text_tick{
+    margin-left: 20px;
+
+
+    font-family: 'my_Sans', monospace;
+    font-size: 20px;
+
+
+
+}
+.search_text_name{
+    font-family: 'IBM Plex Mono', monospace;
+    color: #b4b4b4;
+    left: 0%;
+    bottom: 0%;
+    margin-bottom: 10px;
+    transition: 0.2s;
+    font-size: 9px;
+    font-weight: 200;
+
+}
+.search_items_wrap_wrap{
+    position: absolute;
+    transform: translate(-50%, 0);
+    left: 50%;
+    top: calc(0% + 80px);
+}
+.search_text_exchange{
+    font-size: 10px;
+    font-family: 'IBM Plex Mono', monospace;
+
+    top: 0%;
+    margin-top: 10px;
+    font-weight: 300;
+
+    left: 0%;
+
+
+}
+@media (min-width: 2000px) {
+
+    .search_items_conteiner{
+        grid-template-columns: repeat(3, auto);
+    }
+
+}
+@media(max-width: 730px){
+    .search_items_conteiner{
+        grid-template-columns: repeat(1, auto);
+
+
+        overflow-y: auto;
+
+
+
+
+
+
+    }
+    .search_card{
+        width: 50vw;
+    }
+
+    .search_items_conteiner::-webkit-scrollbar{
+        width: 15px;
+
+
+
+
+    }
+
+    .search_items_conteiner::-webkit-scrollbar-track{
+        background: black;
+
+
+
+    }
+    .search_items_conteiner::-webkit-scrollbar-thumb{
+
+        background: white;
+        border: 6px solid black;
+        border-radius: 20px;
+    }
+
+
+}

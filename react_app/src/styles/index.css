@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+input{
+    -webkit-touch-callout: text;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+body{
+    width: 100%;
+    background-color: black;
+}
+@font-face {
+    font-family: 'my_Sans';
+    src: url('neuemetananext-semibold.woff2') format('woff2'),
+    url('neuemetananext-semibold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.logo_container{
+    width: 20%;
+    height: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hide_content{
+
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 1;
+    top: 0%;
+    left: 0%;
+}
+.logo_svg{
+    margin-left: 5px;
+    height: 40px;
+
+    fill: white;
+
+    margin-right: 15px;
+    z-index: 5;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.logo_svg:hover{
+    fill: #c1ff57;
+}
+.main_container{
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+.search_container{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+}
+.input_search{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: white solid 1px;
+    border-radius: 7px;
+    padding-left: 50px;
+    padding-top: 2px;
+    color: white;
+    height: 40px;
+    width: 60vw;
+    background-color: black;
+    font-family: "my_Sans";
+}
+.input_wrapper{
+    z-index: 3;
+    position: relative;
+}
+.search_icon{
+    height: 15px;
+    transform: translate(0, -50%);
+    top: 50%;
+    margin-left: 15px;
+
+    position: absolute;
+}
+
+
+
+.input_search::placeholder{
+    color: white;
+    font-family: "my_Sans";
+    transition: 0.2s;
+
+}
+.input_search:focus{
+    outline: none;
+
+
+}
+.input_search:focus::placeholder {
+    color: transparent;
+}
+
+
+@media(max-width: 730px){
+    .input_search{
+        width: 70vw;
+    }
+}

@@ -1,0 +1,370 @@
+@font-face {
+    font-family: 'my_Sans';
+    src: url('neuemetananext-semibold.woff2') format('woff2'),
+    url('neuemetananext-semibold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+.card{
+    color: white;
+    background-color: black;
+    border: white solid 1px;
+    border-radius: 10px;
+    width: 70vw;
+    height: 220px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.propery_wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 200px;
+    padding-left: 20px;
+}
+
+
+
+
+.char_container{
+
+
+    top: 50%;
+    left: 50%;
+    height: 70%;
+    width: calc(60% + 50px);
+}
+.cards_active_container{
+    margin-top: 100px;
+    display: grid;
+    justify-content: center;
+    grid-gap: 20px;
+
+}
+.cards_text_tick{
+
+    text-align: left;
+
+    font-family: 'my_Sans';
+    font-size: 30px;
+
+
+
+}
+.tick_exchange{
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    height: 50px;
+    position: relative;
+
+}
+.cards_text_name{
+    font-family: 'IBM Plex Mono', monospace;
+    color: #fff;
+    left: 0%;
+    bottom: 0%;
+    margin-bottom: 10px;
+    transition: 0.2s;
+    font-size: 9px;
+    font-weight: 200;
+
+}
+.cards_text_exchange{
+
+    font-size: 10px;
+    font-family: 'IBM Plex Mono', monospace;
+    color: #b4b4b4;
+
+    position: absolute;
+    left: calc(100% + 5px);
+    bottom: calc(100% + 15px);
+    font-weight: 300;
+    text-align: center;
+
+
+
+
+}
+.price_wrapper{
+
+    padding: 10px 20px 10px 20px;
+    border-radius: 8px;
+    height: max-content;
+    width: max-content;
+    min-height: 30px;
+    min-width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.price_wrapper_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    position: relative;
+}
+
+
+
+.price_positive{
+
+    background-color: #1ED800;
+    transition: 0.2s;
+}
+.price_negative{
+    transition: 0.2s;
+    background-color: red;
+}
+.price{
+    font-family: 'my_Sans';
+    font-size: 10px;
+    margin-top: 4px;
+    margin-left: 3px;
+    text-align: center;
+
+
+    height: 100%;
+    width: 100%;
+
+    transition: 0.2s;
+}
+.percent_light_positive{
+    background-color: #76ff76;
+    transition: 0.2s;
+
+}
+.percent_light_negative{
+    background-color: #ff7676;
+    transition: 0.5s;
+}
+.recharts-cartesian-axis-tick{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+
+
+}
+@keyframes placeHolderShimmer{
+    0%{
+        background-color: #7a7a7a;
+    }
+    50%{
+        background-color: white ;
+    }
+    100%{
+        background-color: #7a7a7a ;
+    }
+}
+
+.price_load {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+
+}
+.custom_tooltip{
+    width: max-content;
+    height: max-content;
+    text-align: center;
+    transform: translate(-60%, 0);
+    background-color: black;
+    border-radius: 5px;
+    border:white solid 1px;
+    padding: 10px 10px 10px 10px;
+    box-shadow: 0px 0px 40px #a8a8a8;
+}
+.tooltip_date{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+
+}
+.tooltip_price{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    margin-top: 5px;
+}
+.into_day{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    position: absolute;
+    top: calc(-0% - 25px);
+
+}
+.info{
+    position: absolute;
+
+    margin-left: 10px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    left: 82%;
+    top: calc(0% + 40px);
+}
+.info > circle{
+    stroke: #9b9b9b;
+    transition: 0.2s;
+}
+.info > path{
+    fill: #9b9b9b;
+    transition: 0.2s;
+}
+
+.info:hover > path{
+    fill: white;
+
+}
+.info:hover > circle{
+    stroke: white;
+}
+
+.reorder-handle_active{
+    cursor: pointer;
+    height: 20px;
+    width: 30px;
+    position: absolute;
+    right: calc(0% - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    animation-name: show;
+    animation-duration: 0.2s;
+
+}
+.path_svg{
+    stroke: #fff;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.reorder-handle_sm{
+    animation-duration: 0.2s;
+    animation-name: show;
+    width: 100%;
+    height: 2px;
+    background-color: #3b3b3b;
+}
+@keyframes hide{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+
+    }
+}
+
+@keyframes show{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.disabled_el{
+
+    display: none;
+}
+.delete_card_active{
+
+    cursor: pointer;
+    background-color: red;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    position: absolute;
+    right: calc(100% + 30px);
+    display: flex;
+
+    justify-content:center;
+    align-items: center;
+    animation-duration: 0.2s;
+    animation-name: show;
+
+}
+.inside_delete_card{
+    animation-duration: 0.2s;
+    animation-name: show;
+    width: 10px;
+    height: 3px;
+    background-color: white;
+}
+
+@media (min-width: 1900px) {
+    .cards_text_name{
+        font-size: 10px;
+        color: white;
+    }
+    .cards_text_tick{
+        font-size: calc(1rem+ 1vw);
+    }
+}
+@media (max-width: 948px) {
+    .card{
+        width: calc(100vw - 20px);
+
+
+    }
+    .reorder-handle_active{
+        display: none;
+    }
+    .reorder-handle_sm{
+        display: none;
+    }
+    .delete_card_active{
+        right: calc(0% + 20px);
+        top: calc(0% + 20px);
+
+    }
+
+    
+}
+@media (max-width: 750px){
+    .info{
+        left: calc(100% - 30px);
+        margin-left: 10px;
+    }
+
+    .card{
+        flex-direction: column;
+        gap: 50px;
+        height: 500px;
+        align-items: flex-start;
+
+    }
+    .propery_wrapper{
+        margin-left: 30px;
+    }
+    .char_container{
+        width: 100%;
+        height: 200px;
+    }
+    .price_wrapper_wrapper{
+        position: absolute;
+        width: max-content;
+        margin-top: 65px;
+        margin-right: 20px;
+        right: 0%;
+        top: 0%;
+    }
+    .delete_card_active{
+        right: calc(0% + 20px);
+        top: calc(0% + 10px);
+
+    }
+
+}
