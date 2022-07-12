@@ -24,7 +24,7 @@ this application consists of two parts: backend python api and react application
 * accepts a get request
    * request price example:
      ```
-     127.0.0.1:80/?type=get$&ticks={FIRST_TICK}&ticks={SECOND_TICK}
+     127.0.0.1:80/?type=get&ticks={FIRST_TICK}&ticks={SECOND_TICK}
      ```
    * request year example:
      ```
