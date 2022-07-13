@@ -1,4 +1,4 @@
-# welm.com
+# welm.io
 
 this application consists of two parts: backend python api and react application
 
